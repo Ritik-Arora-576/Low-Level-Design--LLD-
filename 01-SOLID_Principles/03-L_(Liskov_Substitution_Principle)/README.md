@@ -1,0 +1,7 @@
+# Liskov Substitution Principle
+
+This principle states that, if class A is a sub-type of class B then within a program if we substitute the object of class A with the object of class B then it would not break the behavior of program. Meanwhile, subclass should extend the capablity rather than narrowing it down.
+
+In **Example-1** there is an interface **Vehicle** which has two methods **turnOnEngine()** and **accelerate()**. There are also two sub-classes **Bike** and **Cycle** which implements the methods interface **Vehicle**. In sub-class **Bike** the method **turnOnEngine()** works fine but when it comes to sub-class **Cycle** the method **turnOnEngine()** throws a **Assertion Error**. So, within a program if we replace an object of **Bike** with the object of **Cycle** and if we call a method **obj.turnOnEngine()** then for **Bike** the code works fine but for **Cycle** we get an Exception which breaks the behavior of program and show some ambiguity.
+
+**SOLUTION:** We will only keep generic function i.e **accelerate()** inside an interface and additional functionality will be added into sub-classes whatever they required and posses some extra feature than a base class which is adding **turnOnEngine()** into **Bike** class.
