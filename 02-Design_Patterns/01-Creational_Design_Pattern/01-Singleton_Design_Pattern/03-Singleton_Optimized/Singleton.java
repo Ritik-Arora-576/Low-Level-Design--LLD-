@@ -1,9 +1,16 @@
-public class Singleton{
+import java.io.Serializable;
+
+public class Singleton implements Serializable, Cloneable{
     // static member
     private static Singleton singleton;
 
     // private constructor
-    private Singleton(){}
+    private Singleton(){
+        // Avoid to create multiple instances if constructor would get accessible outside the class via Reflection API
+        if(singleton!=null){
+            throw new RuntimeException("Object is already created...");
+        }
+    }
 
     // public static method: Global Access Point
     public static Singleton getObject(){
@@ -16,6 +23,17 @@ public class Singleton{
                 if(singleton==null) singleton = new Singleton();
             }
         }
+        return singleton;
+    }
+
+    // Avoid to create multiple instances via Deserialization
+    public Object readObject(){
+        return singleton;
+    }
+
+    // Avoid to create multiple instances via cloning an instance
+    @Override
+    public Object clone(){
         return singleton;
     }
 }
