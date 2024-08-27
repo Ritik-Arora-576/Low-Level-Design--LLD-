@@ -1,4 +1,4 @@
-# Lazy Initialization of Singleton Obejct
+# Optimization of Singleton Obejct
 
 ## Advantages
 1. Lazy Initialization which ensures the creation of instance of a Singleton class when it would get called and required within a program.

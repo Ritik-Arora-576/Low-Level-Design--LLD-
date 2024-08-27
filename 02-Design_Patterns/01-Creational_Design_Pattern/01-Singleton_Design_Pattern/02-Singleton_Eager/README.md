@@ -1,4 +1,4 @@
-# Lazy Initialization of Singleton Obejct
+# Eager Initialization of Singleton Obejct
 
 ## Advantages
 It will ensures the thread safety if multiple threads are executing at same time.
