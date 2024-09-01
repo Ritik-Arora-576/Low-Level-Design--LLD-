@@ -8,10 +8,10 @@ This design pattern is useful when creating a new instance is expensive or highl
 
 ### Object Pool Life Cycle
 
-**Step-1: Creation** Create the objects and added into the pool.
-**Step-2: Borrowing** Client will requests and borrow the objects from pool.
-**Step-3: Usage** Client will use a borrowed object for their task.
-**Step-4: Returning** After usage, client will return the objects into a pool.
-**Step-5: Rejection/Removal** If the pool is filled then it will not allow any further objects to be added or remved the object if not in use.
+1. **Step-1: Creation** Create the objects and added into the pool.
+2. **Step-2: Borrowing** Client will requests and borrow the objects from pool.
+3. **Step-3: Usage** Client will use a borrowed object for their task.
+4. **Step-4: Returning** After usage, client will return the objects into a pool.
+5. **Step-5: Rejection/Removal** If the pool is filled then it will not allow any further objects to be added or remved the object if not in use.
 
 **NOTE:** **DBConnectionPoolManager** class must follow **Singleton** Design pattern in order to ensure only one instance of it and thread safety.
