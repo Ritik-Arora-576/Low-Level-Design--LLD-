@@ -1,5 +1,7 @@
 import java.util.List;
 
+import Strategy.SortingStrategy;
+
 public class SortingContext {
     private SortingStrategy sortingStrategy;
 

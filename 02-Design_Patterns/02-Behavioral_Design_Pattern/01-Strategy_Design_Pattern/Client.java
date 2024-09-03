@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import Strategy.BubbleSort;
+import Strategy.MergeSort;
+import Strategy.QuickSort;
+
 public class Client {
     public static void main(String[] args) {
         // defining an array
