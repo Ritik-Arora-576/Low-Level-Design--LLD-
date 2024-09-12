@@ -5,3 +5,6 @@ Observer design pattern is a behavioral design pattern which mantains one to man
 This design pattern generally used in designing **Whether Forecasting Applications**, **Trading Applications**, **E-commerce Applications** where associated users get notified automatically about state change in subject.
 
 In this example, whenever the number of stocks gets changed for iPhone (Observable) or Samsung Watch (Observable) then all the associated observers will get notified automatically.
+
+* **Mediator Design Pattern:** Many to many relationship, Bidirectional communication
+* **Observer Design Pattern:** One to many relationship, Unidirectional communication
