@@ -16,11 +16,9 @@ public class SamsungWatchStocks implements StocksObservable{
     }
 
     public void setStocks(int stocks){
-        // whenever we're adding new stocks then we will notify the observers
-        if(this.stocks==0){
-            this.notifyObservers();
-        }
+        // whenever we are changing the state of observable it will notify to all the associated observers
         this.stocks = stocks;
+        this.notifyObservers();
     }
 
     public int getStocks(){

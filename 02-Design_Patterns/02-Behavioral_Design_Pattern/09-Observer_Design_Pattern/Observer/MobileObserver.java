@@ -12,6 +12,10 @@ public class MobileObserver implements Observer{
     }
 
     public void update(){
-        System.out.println("Notification to "+this.username+": New stocks of "+stocksObservable.getProductName()+" are out now !!!");
+        if(stocksObservable.getStocks()==0){
+            System.out.println("Notification to "+this.username+": All stocks of "+stocksObservable.getProductName()+" are finished :( !!!");
+        } else{
+            System.out.println("Notification to "+this.username+": Current stocks of "+stocksObservable.getProductName()+" are "+stocksObservable.getStocks());
+        }
     }
 }

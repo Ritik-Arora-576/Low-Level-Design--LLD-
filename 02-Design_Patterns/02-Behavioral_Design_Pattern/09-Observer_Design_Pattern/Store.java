@@ -13,7 +13,7 @@ public class Store {
         Observer observer3 = new MobileObserver("akshay564", iPhone);
         Observer observer4 = new EmailObserver("anchal123@gmail.com", samsungSmartWatch);
 
-        // set stocks and notify related observers
+        // set stocks and notify related observers for state change
         iPhone.setStocks(10);
         samsungSmartWatch.setStocks(34);
         iPhone.setStocks(0);

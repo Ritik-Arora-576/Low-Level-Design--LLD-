@@ -12,6 +12,10 @@ public class EmailObserver implements Observer{
     }
 
     public void update(){
-        System.out.println("Email to "+this.emailID+": New stocks of "+stocksObservable.getProductName()+" are out now !!!");
+        if(stocksObservable.getStocks()==0){
+            System.out.println("Notification to "+this.emailID+": All stocks of "+stocksObservable.getProductName()+" are finished :( !!!");
+        } else{
+            System.out.println("Notification to "+this.emailID+": Current stocks of "+stocksObservable.getProductName()+" are "+stocksObservable.getStocks());
+        }
     }
 }
