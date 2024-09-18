@@ -24,3 +24,21 @@ In this state, user enters a product code and then presses **Enter Code Button**
 
 ### State-4 (Dispense State):
 In this state, product will get dispense out from **Vending Machine** and **Product Inventory** will get update and it will went back to **Idle State**.
+
+## Methods and Behavior for each State
+
+### State-1 (Idle State):
+* pressCollectCoin()
+* pressCancelButton()
+
+### State-2 (Collect Coin State):
+* collectCoins()
+* pressDepositCoinButton()
+* pressCancelButton()
+
+### State-3 (Enter Product Code State):
+* enteringProductCode()
+* pressCancelButton()
+
+### State-4 (Dispense State):
+* pressDispenseButton()
