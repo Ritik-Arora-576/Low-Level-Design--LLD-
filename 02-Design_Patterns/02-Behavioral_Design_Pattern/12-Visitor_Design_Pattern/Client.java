@@ -9,14 +9,14 @@ public class Client {
 
         RoomVisitor price = new RoomPricingVisitor();
 
-        price.visit(singleRoom);
-        price.visit(doubleRoom);
-        price.visit(deluxeRoom);
+        singleRoom.accept(price);
+        doubleRoom.accept(price);
+        deluxeRoom.accept(price);
 
         RoomVisitor mantainence = new RoomMantainenceVisitor();
 
-        mantainence.visit(singleRoom);
-        mantainence.visit(doubleRoom);
-        mantainence.visit(deluxeRoom);
+        singleRoom.accept(mantainence);
+        doubleRoom.accept(mantainence);
+        deluxeRoom.accept(mantainence);
     }
 }
