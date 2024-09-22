@@ -9,4 +9,4 @@ Proxy Design Pattern is a structural design pattern which provides extra layers 
 
 ![Proxy Flow Diagram](https://media.geeksforgeeks.org/wp-content/uploads/20240202170221/changing-of-proxies.webp)
 
-In our example, there is an interface **EmployeeDAO** which has create, delete and get method. There is a concrete class **EmployeeDAOImpl** which implements the create, delete and get methods. Rather than directly access these methods initialy request will pass to **Proxy** class, if client is authenticate then it will gives the access of those method in order to enhance database security.
+In our example, there is an interface **EmployeeDAO** which has create, delete and get method. There is a concrete class **EmployeeDAOImpl** which implements the create, delete and get methods. Rather than directly access these methods initialy request will pass to **EmployeeDAOProxy** class, if client is authenticate then it will gives the access of those method in order to enhance database security.
