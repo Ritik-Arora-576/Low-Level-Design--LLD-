@@ -9,7 +9,7 @@ public class Client {
         Creature fish = new Fish(new BreathingInWater());
         fish.breathe();
 
-        Creature tree = new Human(new BreathingThroughLeaf());
+        Creature tree = new Tree(new BreathingThroughLeaf());
         tree.breathe();
     }
 }

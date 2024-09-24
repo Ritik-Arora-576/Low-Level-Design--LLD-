@@ -11,8 +11,4 @@ public class Tree implements Creature{
     public void breathe(){
         breathing.breathe();
     }
-
-    public void setBreathing(Breathing breathing) {
-        this.breathing = breathing;
-    }
 }
