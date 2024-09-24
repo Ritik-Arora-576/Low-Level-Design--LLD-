@@ -9,8 +9,9 @@ Designing calculator also forms tree like structure so in this case we would use
 
 Eg: 2 + (3 * 5)
 
-Tree Like Structure:                 +
-                                    / \
-                                   2   *
-                                      / \
-                                     3   5
+Tree Like Structure: 
+     +
+    / \
+   2   *
+      / \
+     3   5
