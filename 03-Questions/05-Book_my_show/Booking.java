@@ -7,13 +7,15 @@ public class Booking {
     private User user;
     private Show show;
     private List<Seat> bookedSeats;
+    private int bill;
 
-    public Booking(int id, BookingStatus status, User user, Show show, List<Seat> bookedSeats){
+    public Booking(int id, User user, Show show, List<Seat> bookedSeats){
         this.id = id;
         this.status = BookingStatus.PENDING;
         this.user = user;
         this.show = show;
         this.bookedSeats = bookedSeats;
+        this.bill = 0;
     }
 
     public int getId() {
@@ -40,7 +42,17 @@ public class Booking {
         this.status = status;
     }
 
-    public synchronized void bookedSeats(){
+    
+
+    public int getBill() {
+        return bill;
+    }
+
+    public void setBill(int bill) {
+        this.bill = bill;
+    }
+
+    public synchronized boolean bookedSeats(){
         Boolean allSeatsAvailable = true;
 
         for(int i=0;i<bookedSeats.size();i++){
@@ -53,8 +65,11 @@ public class Booking {
         if(allSeatsAvailable){
             for(int i=0;i<bookedSeats.size();i++){
                 bookedSeats.get(i).setIsAvailable(false);
+                setBill(getBill() + bookedSeats.get(i).getPrice());
             }
         }
+
+        return allSeatsAvailable;
     }
 
     public void cancelBooking(){

@@ -41,6 +41,11 @@ public class Show {
         return endTime;
     }
 
+    public Seat getSeatByID(int id){
+        if(seats.containsKey(id)) return seats.get(id);
+        return null;
+    }
+
     private void initializeSeats(int n_silver, int n_gold, int n_platinum){
         for(int i=0;i<n_silver;i++){
             Seat seat = new Seat(i, Category.SILVER, 150);

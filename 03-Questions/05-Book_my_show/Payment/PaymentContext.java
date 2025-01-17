@@ -11,11 +11,19 @@ public class PaymentContext {
         this.strategy = strategy;
     }
 
-    public void doPayment(){
-        strategy.doPayment();
+    public void doPayment(int amount){
+        strategy.doPayment(amount);
     }
 
-    public void refundPayment(){
-        strategy.refundPayment();
+    public void refundPayment(int amount){
+        strategy.refundPayment(amount);
+    }
+
+    public PaymentStatus getStatus(){
+        return strategy.getStatus();
+    }
+
+    public void setStatus(PaymentStatus status){
+        strategy.setStatus(status);
     }
 }

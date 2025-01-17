@@ -15,12 +15,12 @@ public class UPIPayment implements PaymentStrategy{
         this.status = status;
     }
 
-    public void doPayment(){
+    public void doPayment(int amount){
         System.out.println("Payment successfull..");
         setStatus(PaymentStatus.COMPLETED);
     }
 
-    public void refundPayment(){
+    public void refundPayment(int amount){
         System.out.println("Payment Refunded..");
         setStatus(PaymentStatus.REFUNDED);
     }
