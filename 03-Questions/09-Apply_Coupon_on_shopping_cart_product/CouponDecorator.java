@@ -4,4 +4,9 @@ public class CouponDecorator extends Product{
     public CouponDecorator(Product product){
         this.product = product;
     }
+
+    @Override
+    public String getName(){
+        return product.getName();
+    }
 }
